@@ -1,20 +1,56 @@
-#What I did to fix this portfolio
+## The Links
 
-## In index.html
-
-1. Moved styles and scripts to the bottom of the document
-
-## In style.css
-
-1. Add Latin character set from Google Fonts
-
-## In views
-
-1. Reduced and compressed the pizzeria img (2.4MB??!?!!? c'mon!!)
+- The `index.html` link can be found [here](http://n8finch.github.io/udacity-frontend-nanodegree-mobile-portfolio/).
+- The `pizza.html` link can be found [here](http://n8finch.github.io/udacity-frontend-nanodegree-mobile-portfolio/views/pizza.html).
 
 
-===
-original README
+All the files I worked on are in the `dev` folder and gulp task runner refines everything to `dev > dist`. Then I basically copy the dist contents to the main root, because the `clean` task cannot run outside the working directory. 
+
+# What I changed
+
+## Added Gulpfile.js and plugins
+
+Added gulp for taskrunning, namely:
+    
+- html, css and js minification
+- concat js files
+- reducing image size
+- delete/clean current files so new minifications weren't concatinated
+    
+## Index.html
+ 
+- redirected the stylesheets and scripts to .min files
+- moved the styles and scripts below the footer
+- async-ed the scripts.
+- closed `div`
+
+With everything minified, results were good:
+
+![](PageSpeedboth.jpg)
+
+## All images
+
+- resized and compressed
+
+## main.js (in views)
+
+heavily referenced: https://github.com/aricept/frontend-nanodegree-mobile-portfolio/tree/master/src/views/js
+
+- changed all uses of `querySelector` to `getElementById`
+- changed all uses of `querySelectorAll` to `getElementsByClassName`
+- Collapsed `changeSliderLabel()` and `sizeSwitcher()` to avoid running through 2 switch statements
+- Pulled dx and newwidth declaration out of the loop, and pulled the `offsetWidth` checks out of `determineDx()` and into `changePizzaSizes()` to avoid multiple layout operations.
+-  Wrapped the loop in a `requestAnimationFrame()`, allowing the browser to draw when ready.
+- Moved variable declarations out of the loop whenever possible.
+- Moved the scrollPos declaration to a separate function, and tied that to the event listener.
+- `requestAnimationFrame` to allow the browser to time frames
+- Moved the animation technique from `style.left` to `style.transform = translateX()`, which does not affect layout, removing a costly step from the render process.
+- Limited pizza creation to the visible screen only, minimizing the number of elements we need to animate
+
+
+
+
+======Original README==========
 
 ## Website Performance Optimization portfolio project
 
