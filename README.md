@@ -1,3 +1,21 @@
+#What I did to fix this portfolio
+
+## In index.html
+
+1. Moved styles and scripts to the bottom of the document
+
+## In style.css
+
+1. Add Latin character set from Google Fonts
+
+## In views
+
+1. Reduced and compressed the pizzeria img (2.4MB??!?!!? c'mon!!)
+
+
+===
+original README
+
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
