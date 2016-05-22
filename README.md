@@ -1,3 +1,9 @@
+## The Links
+
+- The `index.html` link can be found [here](http://n8finch.github.io/udacity-frontend-nanodegree-mobile-portfolio/).
+- The `pizza.html` link can be found [here](http://n8finch.github.io/udacity-frontend-nanodegree-mobile-portfolio/views/pizza.html).
+
+
 All the files I worked on are in the `dev` folder and gulp task runner refines everything to `dev > dist`. Then I basically copy the dist contents to the main root, because the `clean` task cannot run outside the working directory. 
 
 # What I changed
