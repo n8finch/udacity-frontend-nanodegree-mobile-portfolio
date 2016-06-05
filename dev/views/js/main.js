@@ -556,11 +556,11 @@ window.addEventListener('scroll', updateScroll);
  and items.length variables here since they are unchanging.  */
 
 document.addEventListener('DOMContentLoaded', function() {
-  var cols = 8;
+  var cols = 5;
   var s = 256;
   var maxwidth = window.innerWidth;
   var maxheight = window.innerHeight;
-  for (var i = 0; i < 200; i++) {
+  for (var i = 0; i < 15; i++) {
     if((i % cols) * s < maxwidth && Math.floor(i / cols) * s < maxheight) {
       var elem = document.createElement('img');
       elem.className = 'mover';
